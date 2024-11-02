@@ -1,0 +1,345 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: #f5f5f5; /* Latar belakang */
+    color: #333333; /* Teks default */
+}
+
+p {
+    font-size: 1rem; /* 16px */
+    line-height: 1.9rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+.main-container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+/* button */
+.btn {
+    padding: 1rem 1.5rem;
+    background: #3498db; /* Warna latar button */
+    border: 1.5px solid #2980b9; /* Border button */
+    color: white; /* Teks button */
+    cursor: pointer; 
+    border-radius: 0.5rem; /* Ujung melengkung */
+    transition: background 0.2s ease-in-out; /* Transisi untuk hover */
+}
+
+.btn:hover {
+    background: #2980b9; /* Warna latar button saat hover */
+}
+
+/* title */ 
+.pre-tittle {
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    color: grey;
+    position: relative;
+    padding-left: 40px;
+    width: fit-content;
+    font-weight: 400;
+    font-size: 1rem;
+}
+
+.pre-tittle::before {
+    content: "";
+    width: 20px;
+    height: 1px;
+    background: black;
+    position: absolute;
+    left: 0;
+    top: 50%;
+}
+
+/* logo dan navbar menu */
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem 0;
+    transition: 0.2s ease-in-out;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+    gap: 3rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    font-size: 2rem;
+    margin-left: 2rem;
+}
+
+.logo a {
+    color: black;
+}
+
+nav ul li a {
+    color: black; /* Tetap warna item untuk menu */
+}
+
+/* Home Section */
+#home {
+    height: 720px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+}
+
+.home-name {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+    color: black;
+}
+
+.home-right img {
+    width: 400px;
+    border-radius: 0.7rem;
+}
+
+.home-right {
+    display: flex;
+    justify-content: center;
+}
+
+section {
+    padding-left: 3rem;
+    padding-bottom: 5rem;
+}
+
+/* About Section */
+#about {
+    background-color: #2c3e50; /* Latar belakang About (seperti footer) */
+    padding: 6rem 0;
+}
+
+.section-tittle-about {
+    text-align: center;
+    margin: 1rem 0 0.5rem;
+    color: #f1c40f; /* Warna judul About */
+}
+
+.intro {
+    color: #f1c40f; /* Mengatur warna teks menjadi hitam */
+    font-size: 1rem; /* Ukuran font 16px */
+    line-height: 1.9rem; /* Jarak antar baris */
+    margin: 0.5rem 0; /* Memberikan jarak atas dan bawah */
+    text-align: center; /* Rata tengah teks */
+}
+
+/* layout */
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 3rem;
+}
+
+.about {
+    padding: 3rem 2rem;
+    text-align: center;
+    background: #ffffff; /* Latar belakang card */
+    border-radius: 0.7rem;
+}
+
+.about h4 {
+    color: #3498db; /* Judul keahlian */
+    margin: 0.5rem 0;
+}
+
+.about p {
+    color: black; /* Teks keahlian menjadi hitam */
+}
+
+
+
+
+
+.about-icon {
+    background-color: #3498db; /* Warna icon background */
+    width: fit-content;
+    margin: 0 auto;
+    padding: 1rem 1.3rem;
+    border-radius: 0.5rem;
+}
+
+/* End of About */
+
+/* Skills & Experience */
+#skills {
+    padding: 6rem;
+    background: #ecf0f1; /* Warna background section skills */
+}
+
+.section-tittle-skills {
+    text-align: center;
+    margin: 1rem 0 4rem;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+}
+
+.experience {
+    display: flex;
+    gap: 2rem;
+}
+
+.experience line {
+    padding: 0 0.7rem;
+}
+
+.experience .line div {
+    width: 2px;
+    height: 100%;
+    background: black;
+    position: relative;
+}
+
+.experience-info {
+    margin: 3rem 0;
+}
+
+.experience-date {
+    margin-bottom: 3rem;
+}
+
+.experience .line div::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background: black;
+    border-radius: 50%;
+    position: absolute;
+    left: -6px;
+}
+
+.skills-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 1.5rem;
+}
+
+.skills-right {
+    line-height: 2rem;
+    padding: 0 1rem;
+}
+
+/* End of Experience & Skills */
+
+/* Contact Section */
+#contact {
+    padding: 6rem;
+}
+
+.contact-form div {
+    margin-bottom: 1.4rem;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    font-family: "Roboto", sans-serif;
+    background: white;
+    border: 2px solid gainsboro;
+    border-radius: 0.5rem; /* Ujung melengkung */
+    resize: none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+    color: black;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    border: 1px solid gray;
+}
+
+.btn-submit {
+    width: 100%;
+    padding: 0.75rem 1.3rem;
+    background-color: #2ecc71; /* Warna latar tombol kirim */
+    color: white;
+    border: none;
+    border-radius: 0.5rem; /* Ujung melengkung */
+    cursor: pointer;
+    transition: 0.2s ease-in-out;
+}
+
+.btn-submit:hover {
+    background-color: #27ae60; /* Warna latar tombol kirim saat hover */
+}
+
+/* End of Contact */
+
+/* Footer */
+footer {
+    margin-bottom: 0;
+    padding: 4rem;
+    background: #2c3e50; /* Latar belakang footer */
+    color: white; /* Teks footer */
+    text-align: center;
+}
+
+.footer-icons {
+    margin-bottom: 1rem;
+}
+
+.footer-icons a {
+    margin: 0 0.5rem;
+}
+
+.footer-icons a:hover {
+    fill: black;
+}
+
+.footer-icons {
+    fill: gray;
+}
+
+/* tambahan 2 */
+.footericons a {
+    margin: 0 10px; /* Memberikan jarak antar ikon */
+}
+
+/* tambahan 1 */
+@media (max-width: 768px) {
+    .nav ul {
+        display: none; /* Sembunyikan navbar, atau gunakan ikon burger */
+    }
+
+    #home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .grid-3,
+    .skills-grid {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+}
